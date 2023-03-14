@@ -1,0 +1,19 @@
+body
+{
+}
+.header
+{
+    text-align: center;
+}
+.grid-container
+{
+    display: grid;
+}
+.grid-item
+{
+    min-height: 100px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: black;
+    background-color: skyblue;
+}
