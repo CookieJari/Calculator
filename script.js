@@ -1,8 +1,10 @@
 var n1=0;
 var n2=0;
 
-var n1str;
-var n2str;
+var n1str="";
+var n2str="";
+
+var tempstr="";
 const textDiv = document.querySelector(".grid-item-text");
 
 const btn1 = document.querySelector(".grid-item-1");
@@ -21,6 +23,23 @@ const btnMul = document.querySelector(".grid-item-mul");
 const btnSub = document.querySelector(".grid-item-sub");
 const btnAdd = document.querySelector(".grid-item-add");
 
-textDiv.textContent = "helo"
-console.log(textDiv.textContent);
+const btnClr =document.querySelector(".grid-item-clr");
+btnClr.addEventListener('click',()=> Clear());
+const btnAc =document.querySelector(".grid-item-ac");
 
+
+//function for clearing
+function Clear(){
+    tempstr="";
+    textDiv.textContent = "0";
+}
+
+//create function to handle numbers
+function NumberPress(num){
+    console.log(num);
+    tempstr = tempstr+=num;
+    textDiv.textContent = tempstr;
+}
+//create function to handle operators
+
+//create function to operate
