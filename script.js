@@ -8,6 +8,7 @@ const btnAdd = document.querySelector(".grid-item-add");
 const btnClr =document.querySelector(".grid-item-clr");
 btnClr.addEventListener('click',()=> Clear());
 const btnAc =document.querySelector(".grid-item-ac");
+btnAc.addEventListener('click',()=> AllClear());
 
 const btnEq =document.querySelector(".grid-item-eq");
 btnEq.addEventListener('click',()=> Operate(n1));
@@ -30,7 +31,12 @@ function Clear(){
     textDiv.textContent = "";
 }
 //function for all clear
-
+function AllClear(){
+    n1=null;
+    n2=null;
+    Clear();
+    ClearOperators();
+}
 //create function to handle numbers
 function NumberPress(num){
     if (eq===true) {
@@ -215,6 +221,10 @@ function Divide(a,b){
     console.log(a, b, isNaN(b),eq );
     if (isNaN(b)||b===null) {
         return;
+    }
+    if (b===0) {
+        AllClear();
+        textDiv.textContent="Bro u cannot divide by zero.";
     }
     else if (eq!=true) {
         ans=a/b;
