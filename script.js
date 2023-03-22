@@ -224,7 +224,7 @@ function Divide(a,b){
     }
     if (b===0) {
         AllClear();
-        textDiv.textContent="Bro u cannot divide by zero.";
+        textDiv.textContent="Divide by zero?";
     }
     else if (eq!=true) {
         ans=a/b;

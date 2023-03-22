@@ -8,6 +8,7 @@ body{
     margin: 0px;
     height: 100%;
     width: 100%;
+    background-color: #21c5ce;
 }
 
 .flex-container{ 
@@ -19,21 +20,76 @@ body{
 }
 
 .grid-container{
-    outline: solid blue;
-    padding: .5em;
+    background-color: #222831;
+    padding: 1.2em;
+    border-radius: 8%;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-auto-rows: 1fr;
     grid-gap: 5px;
+
 }
 
-.grid-item-text{
-    outline: solid green;
 
+.grid-item{
+    border-radius: 100%;
+    background-color: #EEEEEE;
+    border: 0px;
+}
+.grid-item :not(.grid-item-text):hover{
+    background-color:#b7c3c4 ;
+}
+.grid-item:not(.grid-item-text):active{
+    background-color:#848e8f ;
+}
+.grid-item:not(.grid-item-clr, .grid-item-ac, .grid-item-text ){
+    height: 40px;
+    width: 40px;
+}
+
+/* Operators */
+    .grid-operator{
+        background-color: #68adaf;
+    }
+    .grid-operator:hover{
+        background-color: #80dde0;
+    }
+    .grid-operator:active{
+        background-color: #497c7e;
+    }
+
+/* Equal sign */
+    .grid-item-eq{
+        background-color: #e7771b;
+        border: 0px;
+    }
+
+    .grid-item-eq:hover{
+        background-color: rgb(240, 168, 109);
+        border: 0px;
+    }
+
+    .grid-item-eq:active{
+        background-color: rgb(156, 112, 77);
+        border: 0px;
+    }
+
+
+.grid-item-text{
     grid-column: 1/-1;
     grid-row: span 2;
     text-align: right;
+    border-radius: 5px;
+    padding: 4px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #393E46;
+    box-shadow: inset 27px 27px 54px #33373e,
+            inset -27px -27px 54px #3f454e;
 }
+
 .grid-item-clr, .grid-item-ac{
     grid-column: span 2;
+    border-radius: 2.5em;
 }
